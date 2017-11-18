@@ -6,6 +6,7 @@ import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 //Intent to open contact menu of the phone
+
+                Toast.makeText(MainActivity.this, "View Contact Button Clicked, Showing Contacts from Device",Toast.LENGTH_LONG).show();
 
                 Intent i = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
                 startActivity(i);
